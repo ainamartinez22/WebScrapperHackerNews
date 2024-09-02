@@ -42,7 +42,14 @@ class HackerNewsScrapper(ScrapperWeb):
         return filter_info
 
     def get_clean_data(this, page_info: str):
+        """Method that returns a list of dicts from the html parsed page info
 
+        Args:
+            page_info (str): html parsed page info
+
+        Returns:
+            list of dicts
+        """
         elements = page_info.select('tr.athing')
 
         info = []
@@ -64,7 +71,14 @@ class HackerNewsScrapper(ScrapperWeb):
     
 
     def get_clean_filter_sort_data(this,info:list):
+        """Method that returns clean filtered sorted data
 
+        Args:
+            info (list): list of dicts that has to be filtered and sorted
+
+        Returns:
+            list of dicts: result of the original list of dicts but filtered (with a new filter column that mentions the filter) and sorted
+        """
         filter_info1 = FilterListOfDicts.filter_gt_number_words(info,5,"title")
         result1 = SortListOfDicts.sort_list_of_dicts(filter_info1,"comments")
 
