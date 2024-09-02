@@ -38,7 +38,7 @@ In order to execute testing with py-test, you should execute on the command line
 ```
 python -m pytest tests/XXXX.py 
 ```
-where XXXX is the file you want to execute it's tests and you have to be located on the project folder (top level of WebScrapperPython).
+where XXXX is the file you want to execute it's tests and you have to be located on the project folder (top level of WebScrapperHackerNews).
 
 
 
@@ -47,7 +47,7 @@ where XXXX is the file you want to execute it's tests and you have to be located
 The project structure is this one:
 
 ```
-└── 📁WebScrapperPython
+└── 📁WebScrapperHackerNews
     └── 📁.github
         └── 📁workflows
             └── pipeline_tests.yml
@@ -69,7 +69,6 @@ The project structure is this one:
             └── sentence_metrics.py
             └── transform_list_of_dicts.py
             └── word_metrics.py
-        └── run_scrapper.py
     └── .gitignore
     └── ADR.md
     └── main.py
@@ -80,33 +79,29 @@ The project structure is this one:
 
 The functionality of every folder and file from the nearest root level is:
 
-* .github: this folder contains the workflows to execute as actions in Github. Particularly, it has a pipeline_tests.yml file, where there are the commands to execute the pipeline when the code is pushed or you do a pull_request at Github.
+* .github: this folder contains the workflows to execute actions in Github. Particularly, it has a pipeline_tests.yml file, where there are the commands to execute the pipeline when the code is pushed or you do a pull_request at Github.
 
-* project: this is the folder in which there is all the program that scraps the web and returns a file with de data extracted. It can be called from the outside, calling the run_scrapper function.
+* project: this is the folder in which there is all the program that scraps the web and returns a file with clean data extracted. It can be called from the outside, calling the run_scrapper function.
 
-* hacker_news_scrapper: this is a module in which there is the class of the custom web scrapper that returns data from the Hacker News URL. This is a custom module because the data we are obtaining depends totally on this URL. It inherits the structure of the class from the scrapper_web module class, the generalized scrapper.
+* hacker_news_scrapper: this is a module in which there is a class of the custom web scrapper that returns data from the Hacker News URL. This is a custom module because the data we are obtaining depends totally on this URL. It inherits the structure of the class from the scrapper_web module class, the generalized scrapper.
 
 * results: a folder to save the result files.
 
-* scrapper_web: a module with a ScrapperWeb class, that is generalized for every existing web. It just have the general methods that are related with obtaning raw data from the page and saving it into a result file.
+* scrapper_web: a module with a ScrapperWeb class, that is generalized for every existing web. It just have the general methods that are related to obtaning raw data from the page (call the get request) and saving it into a result file.
 
-* tests: folder in which there are the py-test files.
+* tests: folder in which there are the pytest files.
 
 * utils: module in which there are some helpful classes with static methods so as to compute certain values from sentences, words and lists of dicts.
 
-* run_scrapper.py: file that create the custom hacker news scrapper and runs the necessary methods to return a file with filtered and sorted data from the page.
+* ADR.md: Architectural Decision Record or Decision Log from this project.
 
-* ADR.md: Architectural Decision Record from this project.
+* .gitignore: file to tell git which files and folders are unnecessary to be tracked and pushed to Github.
 
-* .gitignore: file to tell git which files and folders are unnecessary to track and push to Github.
+* main.py: example file in which you can see how it would be called and runned the web scrapper from the Hacker News web.
 
-* main.py: example file in which you can see how It would be called and runned the web scrapper from the Hacker news web.
+* params.py: file with HackerNewsScrapper params
 
-* params.py: file with global params
-
-* requirements.txt: file with the environment requirements. It contains the python libraries necessaries to run this project in your computer.
-
-
+* requirements.txt: file with the python environment requirements. It contains the python libraries necessaries to run this project in your computer.
 
 
 
@@ -114,7 +109,7 @@ The functionality of every folder and file from the nearest root level is:
 
 In order to improve the project, these would be the points to implement:
 
-* Dockerize the project so as to make sure that everybody can execute it without any problem (with the requirements instaled the same for anyone)
+* Dockerize the project so as to make sure that everybody can execute it without any problem (with the same requirements instaled for anyone)
 
 * Create a decorator to try/catch exceptions and return more information about which exact function returns an exception
 
@@ -124,5 +119,5 @@ In order to improve the project, these would be the points to implement:
 
 * Create a pipeline for the coverage of tests
 
-* Create and end to end testing, maybe with an html of the web saved (as a fake request of the website)
+* Create an end to end testing, maybe with an html of the web saved (as a fake request of the website)
 
