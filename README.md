@@ -11,3 +11,9 @@ As a requirement needed for running the code and install the dependencies, the f
 Python 3.10.3
 pip 22.0.4 
 ```
+
+
+Once Python and pip are installed, the following command should be run for obtaining the needed environment:
+```
+pip install -r requirements.txt
+```
