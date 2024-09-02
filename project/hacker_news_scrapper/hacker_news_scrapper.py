@@ -39,7 +39,17 @@ class HackerNewsScrapper(ScrapperWeb):
         clean_list = this.get_clean_data(page_info) 
         filter_info = this.get_clean_filter_sort_data(clean_list)
 
-        return filter_info
+        final_result = {
+            "request_timestamp": this.current_time,
+            "data": filter_info
+        }
+
+        file_name = './project/results/final_result_'+str(this.current_time)+'.json'
+        print(file_name)
+
+        this.load_data_into_file(final_result,file_name)
+
+        return final_result
 
     def get_clean_data(this, page_info: str):
         """Method that returns a list of dicts from the html parsed page info
