@@ -1,0 +1,215 @@
+{
+    "request_timestamp": "20240901_195743",
+    "data": [
+        {
+            "id": "41418367",
+            "title": "IEEE President's Note: Why Students Should Stay with IEEE",
+            "score": "5",
+            "comments": "0",
+            "filter": "1"
+        },
+        {
+            "id": "41405424",
+            "title": "The World Map of the Internet in 2021",
+            "score": "5",
+            "comments": "1",
+            "filter": "1"
+        },
+        {
+            "id": "41418508",
+            "title": "Lego to replace oil in its bricks with pricier renewable plastic",
+            "score": "5",
+            "comments": "1",
+            "filter": "1"
+        },
+        {
+            "id": "41397916",
+            "title": "The Production and Reproduction of Sound by Light (1880)",
+            "score": "8",
+            "comments": "1",
+            "filter": "1"
+        },
+        {
+            "id": "41403431",
+            "title": "The long road to ropeless fishing",
+            "score": "6",
+            "comments": "1",
+            "filter": "1"
+        },
+        {
+            "id": "41401941",
+            "title": "A primer on why microbiome research is hard",
+            "score": "15",
+            "comments": "2",
+            "filter": "1"
+        },
+        {
+            "id": "41380686",
+            "title": "Hypothyroidism: The anonymous Olmec artisan and Velázquez (2017)",
+            "score": "25",
+            "comments": "2",
+            "filter": "1"
+        },
+        {
+            "id": "41401664",
+            "title": "The vagus nerve orchestrates the mind-body connection",
+            "score": "51",
+            "comments": "3",
+            "filter": "1"
+        },
+        {
+            "id": "41397901",
+            "title": "The occult technology of the rollercoaster",
+            "score": "9",
+            "comments": "4",
+            "filter": "1"
+        },
+        {
+            "id": "41388750",
+            "title": "Escaping from Anaconda's Stranglehold on macOS",
+            "score": "4",
+            "comments": "7",
+            "filter": "1"
+        },
+        {
+            "id": "41412221",
+            "title": "A brief history of barbed wire fence telephone networks",
+            "score": "106",
+            "comments": "12",
+            "filter": "1"
+        },
+        {
+            "id": "41417997",
+            "title": "Using the moiré effect to show different arrows to each observer (2018)",
+            "score": "50",
+            "comments": "13",
+            "filter": "1"
+        },
+        {
+            "id": "41415866",
+            "title": "The web's clipboard, and how it stores data of different types",
+            "score": "85",
+            "comments": "13",
+            "filter": "1"
+        },
+        {
+            "id": "41398629",
+            "title": "Build Your Own Z80 Computer: Design Guidelines and Application (1981)",
+            "score": "69",
+            "comments": "14",
+            "filter": "1"
+        },
+        {
+            "id": "41384456",
+            "title": "MapRoulette: the micro-tasking tool for OpenStreetMap",
+            "score": "89",
+            "comments": "29",
+            "filter": "1"
+        },
+        {
+            "id": "41411122",
+            "title": "Percona Everest: open-source automated database provisioning and management",
+            "score": "94",
+            "comments": "39",
+            "filter": "1"
+        },
+        {
+            "id": "41413662",
+            "title": "Playstation 2 GS emulation – the final frontier of Vulkan compute emulation",
+            "score": "180",
+            "comments": "42",
+            "filter": "1"
+        },
+        {
+            "id": "41415077",
+            "title": "Godot on iPad, Toolbars, Importers, Embedding, Debugger",
+            "score": "99",
+            "comments": "43",
+            "filter": "1"
+        },
+        {
+            "id": "41416714",
+            "title": "Show HN: Linkpreview, see how your sites looks in social media and chat apps",
+            "score": "132",
+            "comments": "52",
+            "filter": "1"
+        },
+        {
+            "id": "41409503",
+            "title": "Harder Drive: hard drives we didn't want, or need (2022) [video]",
+            "score": "389",
+            "comments": "66",
+            "filter": "1"
+        },
+        {
+            "id": "41415238",
+            "title": "Honey, I shrunk {fmt}: bringing binary size to 14k and ditching the C++ runtime",
+            "score": "178",
+            "comments": "68",
+            "filter": "1"
+        },
+        {
+            "id": "41417284",
+            "title": "How a leading chain of psychiatric hospitals traps patients",
+            "score": "145",
+            "comments": "74",
+            "filter": "1"
+        },
+        {
+            "id": "41412256",
+            "title": "Building LLMs from the Ground Up: A 3-Hour Coding Workshop",
+            "score": "790",
+            "comments": "92",
+            "filter": "1"
+        },
+        {
+            "id": "41415819",
+            "title": "Anarchy in Sudan has spawned the world’s worst famine in 40 years",
+            "score": "208",
+            "comments": "268",
+            "filter": "1"
+        },
+        {
+            "id": "41409882",
+            "title": "Did your car witness a crime?",
+            "score": "260",
+            "comments": "540",
+            "filter": "1"
+        },
+        {
+            "id": "41417024",
+            "title": "Vizdom: Diagrams as Code",
+            "score": "24",
+            "comments": "14",
+            "filter": "2"
+        },
+        {
+            "id": "41404383",
+            "title": "Lady tasting tea",
+            "score": "39",
+            "comments": "11",
+            "filter": "2"
+        },
+        {
+            "id": "41415647",
+            "title": "Einstein's Other Theory of Everything",
+            "score": "108",
+            "comments": "39",
+            "filter": "2"
+        },
+        {
+            "id": "41407195",
+            "title": "Making an atomic trampoline [video]",
+            "score": "130",
+            "comments": "53",
+            "filter": "2"
+        },
+        {
+            "id": "41415023",
+            "title": "Founder Mode",
+            "score": "522",
+            "comments": "349",
+            "filter": "2"
+        }
+    ]
+}
