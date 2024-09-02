@@ -36,6 +36,30 @@ class FilterListOfDicts():
         return [item for item in info if SentenceMetrics.get_count_words(item[field]) > number] 
 
 
+class SortListOfDicts():
+    """Class that contains some methods that sort a list of dictionaries
+
+    Returns:
+        list of dicts
+    """
+
+    @staticmethod
+    def sort_list_of_dicts(info:list, field: str, desc = False):
+        """Function that sorts a list of dicts by a value field
+
+        Args:
+            info (list): list of dicts you want to sort
+            field (str): field by the value of which you want to sort
+            desc (bool, optional): sorting descending. Defaults to False (so descending).
+
+        Returns:
+            list of dicts: sorted
+        """
+        return sorted(info, key=lambda x: int(x[field]), reverse=desc)
+    
+    
+
+
 
     
 
