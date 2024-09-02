@@ -1,6 +1,7 @@
 from project.scrapper_web.scrapper_web import ScrapperWeb
 import project.hacker_news_scrapper.params as params
 from project.utils.sentence_metrics import SentenceMetrics
+from project.utils.transform_list_of_dicts import FilterListOfDicts,SortListOfDicts
 import unicodedata
 
 class HackerNewsScrapper(ScrapperWeb):
@@ -17,6 +18,8 @@ class HackerNewsScrapper(ScrapperWeb):
         Function to run the Hackers News Web Scrapper.
     get_clean_data(page_info: str)
         Returns an list of dicts (custom) from the information of page_info, that it's the html parsed from the web.
+    get_clean_filter_sort_data(info:list)
+        Returns an array of dicts filtering and sorting the original info (a list of dicts passed by argument) with custom criteria
     
      
     """
@@ -34,8 +37,9 @@ class HackerNewsScrapper(ScrapperWeb):
 
         page_info = this.get_request()
         clean_list = this.get_clean_data(page_info) 
+        filter_info = this.get_clean_filter_sort_data(clean_list)
 
-        return clean_list
+        return filter_info
 
     def get_clean_data(this, page_info: str):
 
@@ -57,3 +61,17 @@ class HackerNewsScrapper(ScrapperWeb):
             })
 
         return info
+    
+
+    def get_clean_filter_sort_data(this,info:list):
+
+        filter_info1 = FilterListOfDicts.filter_gt_number_words(info,5,"title")
+        result1 = SortListOfDicts.sort_list_of_dicts(filter_info1,"comments")
+
+        filter_info2 = FilterListOfDicts.filter_lte_number_words(info,5,"title")
+        result2 = SortListOfDicts.sort_list_of_dicts(filter_info2,"score")
+
+        join_result = [dict(item, filter='1') for item in result1]+[dict(item, filter='2') for item in result2]
+
+        return join_result
+        
