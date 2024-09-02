@@ -31,10 +31,13 @@ Selenium usually returns some errors and have some problems related to the brows
 
 # ADR: Functional programming or object oriented programming
 
-It has been a difficult decision, but using Python, a language that can use both ways of programming in an efficient and organized way, I have decided to use at every module the object oriented programming. However, the utils module could have been done all with functions, without any class but I decided to follow the consistency of the project and create classes but with static methods, as this functions just compute values and do not change the state of the object.
+It has been a difficult decision, but using Python, a language that can use both ways of programming in an efficient and organized way, I have decided to use at every module object oriented programming. This way, methods are encapsulated in objects and seems more understandable and elegant (on my opinion). However, utils module could have been done all with functions, without any class but I decided to follow the consistency of the project and create classes using static methods, as this functions just compute values and do not change the state of the object.
 
 
 # ADR: Library to use for Python testing
 
 I considered pytest and unittest as the libraries I could use for testing. I decided to use pytest because unittest has more verbose syntax.
 
+# ADR: Way of saving data
+
+In order to save data, I could have used a BBDD, but knowing that I would have few days for doing this exercise and this doesn't seem necessary, I have chose to use just files. On my opinion, result data doesn't need to be relational. We don't need to transact with it in any way. Therefore, I have chosen the fastest way, that it's saving it in a file.
